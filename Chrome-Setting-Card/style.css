@@ -1,0 +1,147 @@
+:root{
+  --background-color: rgb(246,246,246);
+  --container-background-color: hsl(95, 31%, 86%);
+  --hover-container-background-color: rgb(157, 157, 157);
+  --active-container-background-color: hsl(0, 1%, 56%);
+  --button-color: rgb(26, 115, 200);
+  --hover-button-background-color: rgb(199, 196, 196);
+  --active-hover-button-background-color: hsl(0, 1%, 56%);
+  --li-color: hsl(0, 0%, 11%);
+  --hover-li-color: rgb(28, 28, 28);
+  --padding: 8px;
+  --box-shadow: 0px 1px 5px rgb(156, 152, 152);
+  --border-radius: 6px;
+  --border-color: rgb(160, 158, 158);
+  --transition: 690ms;
+  --hover-transition: 400ms;
+  --profile-border-radius: 50%;
+  /* font weight */
+  --li-font-weight-small: 400;
+  --li-font-weight-medium: 600;
+  --li-font-weight-large: 800;
+  /* letter spacing */
+  --li-letter-spacing-small: 0.2px;
+  --li-letter-spacing-medium: 0.6px;
+  --li-letter-spacing-large: 1px;
+  /* font size */
+  --li-font-size-small: 10px;
+  --li-font-size-medium: 15px;
+  --li-font-size-large: 20px;
+}
+@media(prefers-color-scheme:dark){
+  :root{
+    --background-color: rgb(37, 37, 37);
+    --container-background-color: hsl(0, 0%, 32%);
+    --button-color: rgb(26, 115, 200);
+    --hover-container-background-color: rgb(157, 157, 157);
+    --active-container-background-color: hsl(0, 1%, 56%);
+    --hover-button-background-color: rgb(199, 196, 196);
+    --active-hover-button-background-color: hsl(0, 1%, 56%);
+    --li-color: rgb(246,246,246);
+    --hover-li-color: rgb(28, 28, 28);
+    --padding: 8px;
+    --box-shadow: 0px 1px 5px rgb(181, 181, 181);
+    --border-radius: 6px;
+    --border-color: rgba(95, 99, 104, 0.851);
+    --transition: 690ms;
+    --hover-transition: 400ms;
+    --profile-border-radius: 50%;
+    /* font weight */
+    --li-font-weight-small: 400;
+    --li-font-weight-medium: 600;
+    --li-font-weight-large: 800;
+    /* letter spacing */
+    --li-letter-spacing-small: 0.2px;
+    --li-letter-spacing-medium: 0.6px;
+    --li-letter-spacing-large: 1px;
+    /* font size */
+    --li-font-size-small: 10px;
+    --li-font-size-medium: 15px;
+    --li-font-size-large: 20px;
+  }
+}
+body {
+  margin: 0;
+  background-color: var(--background-color);
+}
+.amolazemi-setting-card {
+  background-color: var(--container-background-color);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  width: 600px;
+}
+.upper-of-amolazemi-setting-card{
+  display: flex;
+  gap: 50px;
+  padding:  calc(1*var(--padding)) calc(1.8*var(--padding));
+}
+.upper-of-amolazemi-setting-card img{
+  border-radius: var(--profile-border-radius);
+  position: absolute;
+  top: 25px;
+}
+.upper-of-amolazemi-setting-card p{
+  font-size: var(--li-font-size-small);
+  font-weight: var(--li-font-weight-medium);
+  color: var(--li-color);
+  user-select: none;
+}
+
+.amolazemi-button {
+  color: var(--button-color);
+  height: 32px;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  border-radius: var(--border-radius);
+  padding: calc(1*var(--padding)) calc(2*var(--padding));
+  left: 520px;
+  margin-top: 13px;
+  position: absolute;
+  transition: var(--transition); 
+}
+.amolazemi-button:hover {
+  background-color: var(--hover-button-background-color);
+  color: var(--hover-li-color);
+  transition: var(--hover-transition);  
+}
+.amolazemi-button:active{
+  background-color: var(--active-hover-button-background-color);
+}
+.amolazemi-setting-card ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.amolazemi-setting-card li{
+  color: var(--li-color);
+  user-select: none;
+  padding: calc(2*var(--padding)) calc(3*var(--padding));
+  border-bottom: 1px solid var(--border-color);
+  font-weight: var(--li-font-weight-medium);
+  letter-spacing: var(--li-letter-spacing-medium);
+  font-size: var(--li-font-size-medium);
+  transition: var(--transition);
+  display: flex;
+  justify-content: space-between;
+}
+.amolazemi-setting-card li:hover{
+  background-color: var(--hover-container-background-color);
+  color: var(--hover-li-color);
+  cursor: pointer;
+  transition: var(--hover-transition);
+}
+.amolazemi-setting-card li:active{
+  background-color: var(--active-container-background-color);
+}
+.amolazemi-setting-card li:last-child{
+  border-bottom: none;
+  display: flex;
+}
+.amolazemi-setting-card alwatr-icon{
+  padding: 4px 2px;
+}
+.amolazemi-setting-card li:first-child{
+  border-top: 1px solid var(--border-color);
+}
